@@ -113,11 +113,20 @@ class OnboardingBloc extends Bloc<OnboardingEvent, OnboardingState> {
     emit(const OnboardingCompleted());
   }
 
-  /// Complete onboarding and navigate to home
+  /// Complete onboarding and navigate to avatar creation
   Future<void> _onComplete(
     OnboardingComplete event,
     Emitter<OnboardingState> emit,
   ) async {
     emit(const OnboardingCompleted());
+    
+    // Navigate to avatar creation screen
+    if (mounted) {
+      Navigator.of(context).pushReplacement(
+        MaterialPageRoute(
+          builder: (_) => const AvatarCreationScreen(),
+        ),
+      );
+    }
   }
 }

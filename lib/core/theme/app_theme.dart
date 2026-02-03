@@ -37,6 +37,17 @@ class AppColors {
   static const Color powerCharisma = Color(0xFF6BCB77);
   static const Color powerWisdom = Color(0xFF9B59B6);
 
+  // Superpower skill colors
+  static const Color skillCreatividad = Color(0xFFFFA500);
+  static const Color skillInnovación = Color(0xFF4D96FF);
+  static const Color skillComunicación = Color(0xFFFF6B6B);
+  static const Color skillLiderazgo = Color(0xFF6BCB77);
+  static const Color skillTecnología = Color(0xFF4D96FF);
+  static const Color skillDiseño = Color(0xFFFFD93D);
+  static const Color skillNegociación = Color(0xFFFF6B6B);
+  static const Color skillAnálisis = Color(0xFF4D96FF);
+  static const Color skillEstrategia = Color(0xFF9B59B6);
+
   // Gradient colors
   static const LinearGradient primaryGradient = LinearGradient(
     begin: Alignment.topLeft,

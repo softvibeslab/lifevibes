@@ -1,4 +1,7 @@
 import 'package:firebase_core/firebase_core.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:cloud_functions/cloud_functions.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -6,7 +9,21 @@ import 'core/constants/firebase_constants.dart';
 import 'core/theme/app_theme.dart';
 import 'features/auth/bloc/auth_bloc.dart';
 import 'features/onboarding/bloc/onboarding_bloc.dart';
+import 'features/avatar/bloc/avatar_bloc.dart';
+import 'features/poppy/bloc/coach_chat_bloc.dart';
+import 'features/poppy/services/poppy_service.dart';
+import 'features/match/bloc/match_bloc.dart';
+import 'features/quest/bloc/quest_bloc.dart';
+import 'features/funnel/bloc/funnel_bloc.dart';
+import 'features/product/bloc/product_bloc.dart';
 import 'features/onboarding/presentation/pages/onboarding_screen.dart';
+import 'features/avatar/pages/avatar_page.dart';
+import 'features/poppy/pages/coach_page.dart';
+import 'features/match/pages/match_page.dart';
+import 'features/quest/pages/quest_page.dart';
+import 'features/funnel/pages/funnel_page.dart';
+import 'features/product/pages/product_page.dart';
+import 'features/home/presentation/pages/home_screen.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -24,11 +41,29 @@ void main() async {
     ),
   );
 
-  runApp(const LifeVibesApp());
+  // Initialize Firebase services
+  final firestore = FirebaseFirestore.instance;
+  final functions = FirebaseFunctions.instance;
+  final auth = FirebaseAuth.instance;
+
+  runApp(LifeVibesApp(
+    firestore: firestore,
+    functions: functions,
+    auth: auth,
+  ));
 }
 
 class LifeVibesApp extends StatelessWidget {
-  const LifeVibesApp({super.key});
+  final FirebaseFirestore firestore;
+  final FirebaseFunctions functions;
+  final FirebaseAuth auth;
+
+  const LifeVibesApp({
+    super.key,
+    required this.firestore,
+    required this.functions,
+    required this.auth,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -36,15 +71,48 @@ class LifeVibesApp extends StatelessWidget {
       providers: [
         BlocProvider(create: (_) => AuthBloc()),
         BlocProvider(create: (_) => OnboardingBloc()),
+        BlocProvider(
+          create: (_) => AvatarBloc(firestore),
+        ),
+        BlocProvider(
+          create: (_) => CoachChatBloc(PoppyService()),
+        ),
+        BlocProvider(
+          create: (_) => MatchBloc(firestore, auth),
+        ),
+        BlocProvider(
+          create: (_) => QuestBloc(firestore, auth, functions),
+        ),
+        BlocProvider(
+          create: (_) => FunnelBloc(firestore, auth),
+        ),
+        BlocProvider(
+          create: (_) => ProductBloc(firestore, auth),
+        ),
       ],
       child: MaterialApp(
         title: 'LifeVibes',
         debugShowCheckedModeBanner: false,
         theme: AppTheme.darkTheme,
         home: const SplashScreen(),
+        routes: {
+          '/avatar': (context) => const AvatarPage(),
+          '/coach': (context) => const CoachPage(),
+          '/match': (context) => const MatchPage(),
+          '/quest': (context) => const QuestPage(),
+          '/funnel': (context) => const FunnelPage(),
+          '/product': (context) => const ProductPage(),
+          '/home': (context) => const HomeScreen(),
+        },
         onGenerateRoute: (settings) {
-          // TODO: Implement route generator
-          return null;
+          switch (settings.name) {
+            case '/':
+              return MaterialPageRoute(
+                builder: (_) => const OnboardingScreen(),
+              );
+            default:
+              return null;
+          }
         },
       ),
     );
