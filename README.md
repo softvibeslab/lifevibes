@@ -128,3 +128,11 @@ Proprietary - Softvibes (c) 2026
 ---
 
 **Construido con buena vibra en Cancun, Mexico** ✨
+## Metodo de Estrategia de Contenido: Pilares + Topicos + Temas
+
+Concepto tipo supermercado de conocimiento:
+- 4 Pilares (Areas grandes)
+- 16 Topicos (4 por pilar)
+- 160+ Temas (10+ por topico)
+
+Ver documentacion completa en CONTENT_STRATEGY_METHOD.md
