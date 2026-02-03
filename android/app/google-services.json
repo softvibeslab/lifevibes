@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "712287218180",
+    "firebase_url": "https://lifevibes-e5915-default-rtdb.firebaseio.com",
+    "project_id": "lifevibes-e5915",
+    "storage_bucket": "lifevibes-e5915.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:712287218180:android:7dbc4b2c8ed84fe0a72351",
+        "android_client_info": {
+          "package_name": "com.softvibes.lifevibes"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC_3lh9a6tTnAeLACJp2notPRCLDDxCsAY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
