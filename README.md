@@ -108,7 +108,8 @@ Entregables:
 
 - **METHODOLOGY_SOFTVIBES.md**: Metodo Softvibes1 completo
 - **PRODUCT_DESCRIPTION.md**: Descripcion detallada del producto
-- **TECH_SPECS.md**: Especificaciones tecnicas (FastAPI version)
+- **TECH_SPECS_SOFTVIBES.md**: Especificaciones tecnicas actuales (Flutter + Firebase)
+- **TECH_SPECS_FASTAPI.md**: Especificaciones tecnicas deprecadas (FastAPI - referencia historica)
 - **ROADMAP.md**: Plan de desarrollo 9-12 meses
 
 ---

@@ -1,4 +1,20 @@
-# LifeVibes - Especificaciones Tecnicas
+# ⚠️ DEPRECATED - NO USAR - ARCHIVO DE REFERENCIA HISTÓRICA
+
+Este archivo contiene especificaciones técnicas de una versión anterior de LifeVibes
+(Backend: FastAPI + Supabase + LangChain | Frontend: Next.js + React Native).
+
+**Stack actual:** Flutter + Firebase + PoppyAI (ver TECH_SPECS_SOFTVIBES.md)
+
+Fecha de deprecación: 2026-02-03
+Razón: El equipo Softvibes (Roger, Omar, Roberto) ya domina Flutter + Firebase, por lo
+que se decidió usar este stack en lugar de FastAPI + Supabase.
+
+Este archivo se mantiene como referencia histórica por si en el futuro se considera
+cambiar de stack tecnológico.
+
+---
+
+# LifeVibes - Especificaciones Tecnicas (DEPRECATED)
 
 ## Arquitectura del Sistema
 
