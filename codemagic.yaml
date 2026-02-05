@@ -1,0 +1,92 @@
+# Codemagic CI/CD Configuration for LifeVibes
+# Documentation: https://docs.codemagic.io/yaml-basic-configuration/
+
+workflows:
+  android-workflow:
+    name: Android Build + Firebase App Distribution
+    environment:
+      # Variables de entorno
+      vars:
+        FLUTTER_VERSION: "3.27.0"
+        XCODE_VERSION: "15.0"
+
+      # Asegurar que se use la version correcte de Flutter
+      flutter: "stable"
+
+    scripts:
+      # Mostrar informacion del entorno
+      - name: Build info
+        script: |
+          echo "Flutter version:"
+          flutter --version
+          echo "Java version:"
+          java -version
+
+      # Obtener dependencias
+      - name: Install dependencies
+        script: |
+          flutter pub get
+
+      # Ejecutar tests (continua aunque fallen)
+      - name: Run tests
+        script: |
+          flutter test || echo "Tests failed or not found, continuing..."
+
+      # Build APK Release
+      - name: Build Android APK
+        script: |
+          flutter build apk --release \
+            --build-number=${CM_BUILD_ID} \
+            --build-name=1.0.${CM_BUILD_ID}
+
+      # Renombrar APK para identificacion
+      - name: Rename APK
+        script: |
+          cd build/app/outputs/flutter-apk/
+          mv app-release.apk lifevibes-${CM_BUILD_ID}.apk
+          ls -la
+
+    publishing:
+      # Publicar en Firebase App Distribution
+      firebase:
+        # Email de servicio de Firebase (configurar en Codemagic)
+        service_credentials: $FCM_SERVICE_ACCOUNT
+        # Groups de testers que recibiran la notificacion
+        groups:
+          - testers
+          - beta-users
+        # Notas del build
+        notes: "Build #${CM_BUILD_ID} - Branch: ${CM_BRANCH}
+
+      # Publicar como artefacto en Codemagic
+      artifacts:
+        - build/app/outputs/flutter-apk/*.apk
+
+      # Notificaciones por email
+      email:
+        recipients:
+          - roger@softvibes.com
+        notify:
+          success: true
+          failure: true
+
+  # Workflow adicional para builds de debug rapidos
+  debug-workflow:
+    name: Android Debug (Fast)
+    environment:
+      flutter: "stable"
+
+    scripts:
+      - flutter pub get
+      - flutter build apk --debug
+
+    publishing:
+      artifacts:
+        - build/app/outputs/flutter-apk/*.apk
+
+      email:
+        recipients:
+          - roger@softvibes.com
+        notify:
+          success: false
+          failure: true

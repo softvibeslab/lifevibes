@@ -164,6 +164,26 @@ Ver `docs/BUILD_ANDROID.md` para guía completa de:
 - Generación de App Bundle (Google Play)
 - Solución de problemas
 
+---
+
+## 🚀 CI/CD Automatizado
+
+### Codemagic + Firebase App Distribution
+
+El proyecto está configurado con CI/CD automatizado:
+
+```
+Push a GitHub ──► Codemagic Build ──► Firebase Distribution ──► Testers
+```
+
+**Características:**
+- Build automático en cada push a `main`
+- APK publicado en Firebase App Distribution
+- Testers reciben notificación por email
+- 500 builds/mes gratis
+
+**Setup:** Ver `docs/CODEMAGIC_SETUP.md`
+
 ## Equipo
 
 - **Roger Garcia Vital**: Visión y estrategia
