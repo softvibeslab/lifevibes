@@ -184,6 +184,8 @@ class QuestModel {
         return 'Diaria';
       case QuestType.weekly:
         return 'Semanal';
+      case QuestType.monthly:
+        return 'Mensual';
       case QuestType.milestone:
         return 'Milestone';
       case QuestType.challenge:
@@ -360,7 +362,7 @@ Meta: 3 conversaciones genuinas esta semana.
           instructions: '''
 1. LEAD MAGNET: ¿Qué puedes dar GRATIS que resuelva un problema pequeño?
 2. EMAIL SEQUENCE: 3-5 emails que nutren la relación
-3. OFFER: Tu primer producto digital ($7-$77)
+3. OFFER: Tu primer producto digital (\$7-\$77)
 
 Escribe cada componente. No necesitas implementarlo todavía.
 ''',
@@ -381,7 +383,7 @@ Escribe cada componente. No necesitas implementarlo todavía.
           description: 'Publica tu primer DBY (Done-By-You) producto.',
           instructions: '''
 1. Crea un producto digital (ebook, curso, template)
-2. Define el precio ($7-$77)
+2. Define el precio (\$7-\$77)
 3. Crea una landing page básica
 4. Haz 3 ventas
 
@@ -396,8 +398,8 @@ Tip: Empieza pequeño. Un $7 ebook es mejor que un producto perfecto que nunca l
         ),
         QuestModel(
           questId: 'tener_002',
-          title: 'Alcanza $100 en Ventas',
-          description: 'Genera $100 en ventas este mes.',
+          title: 'Alcanza \$100 en Ventas',
+          description: 'Genera \$100 en ventas este mes.',
           type: QuestType.monthly,
           phase: QuestPhase.tener,
           difficulty: QuestDifficulty.hard,
@@ -408,7 +410,7 @@ Tip: Empieza pequeño. Un $7 ebook es mejor que un producto perfecto que nunca l
         QuestModel(
           questId: 'tener_003',
           title: 'Consigue tu Primer Cliente DWY',
-          description: 'Cierra tu primer cliente de mentoría grupal ($97-$497).',
+          description: 'Cierra tu primer cliente de mentoría grupal (\$97-\$497).',
           type: QuestType.milestone,
           phase: QuestPhase.tener,
           difficulty: QuestDifficulty.epic,

@@ -5,6 +5,7 @@ class ProductState extends Equatable {
   final bool isLoading;
   final bool hasError;
   final String? errorMessage;
+  final String? message;
   final List<ProductModel> products;
   final List<ProductModel> publishedProducts;
   final List<ProductModel> draftProducts;
@@ -15,6 +16,7 @@ class ProductState extends Equatable {
     this.isLoading = false,
     this.hasError = false,
     this.errorMessage,
+    this.message,
     this.products = const [],
     this.publishedProducts = const [],
     this.draftProducts = const [],
@@ -26,6 +28,7 @@ class ProductState extends Equatable {
     bool? isLoading,
     bool? hasError,
     String? errorMessage,
+    String? message,
     List<ProductModel>? products,
     List<ProductModel>? publishedProducts,
     List<ProductModel>? draftProducts,
@@ -36,6 +39,7 @@ class ProductState extends Equatable {
       isLoading: isLoading ?? this.isLoading,
       hasError: hasError ?? this.hasError,
       errorMessage: errorMessage,
+      message: message,
       products: products ?? this.products,
       publishedProducts: publishedProducts ?? this.publishedProducts,
       draftProducts: draftProducts ?? this.draftProducts,
@@ -49,6 +53,7 @@ class ProductState extends Equatable {
         isLoading,
         hasError,
         errorMessage,
+        message,
         products,
         publishedProducts,
         draftProducts,

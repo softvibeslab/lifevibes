@@ -124,16 +124,8 @@ class QuestBloc extends Bloc<QuestEvent, QuestState> {
         emit(state.copyWith(
           currentDailyQuest: dailyQuest,
           activeQuests: [dailyQuest, ...state.activeQuests],
+          message: '✨ ¡Nueva misión diaria asignada!',
         ));
-
-        ScaffoldMessenger.of(context).mounted
-            ? ScaffoldMessenger.of(context).showSnackBar(
-                const SnackBar(
-                  content: Text('✨ ¡Nueva misión diaria asignada!'),
-                  backgroundColor: Colors.green,
-                ),
-              )
-            : null;
       }
     } catch (e) {
       emit(state.copyWith(
@@ -209,16 +201,8 @@ class QuestBloc extends Bloc<QuestEvent, QuestState> {
           ],
           totalXP: state.totalXP + xpAwarded,
           totalQuestsCompleted: state.totalQuestsCompleted + 1,
+          message: '🎉 ¡+$xpAwarded XP! Misión completada',
         ));
-
-        ScaffoldMessenger.of(context).mounted
-            ? ScaffoldMessenger.of(context).showSnackBar(
-                SnackBar(
-                  content: Text('🎉 ¡+$xpAwarded XP! Misión completada'),
-                  backgroundColor: Colors.green,
-                ),
-              )
-            : null;
       }
     } catch (e) {
       emit(state.copyWith(
@@ -239,13 +223,3 @@ class QuestBloc extends Bloc<QuestEvent, QuestState> {
 }
 
 // Get context for ScaffoldMessenger
-extension on BuildContext {
-  bool get mounted {
-    try {
-      widget;
-      return true;
-    } catch (e) {
-      return false;
-    }
-  }
-}

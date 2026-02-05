@@ -3,7 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import '../bloc/avatar_bloc.dart';
 import '../widgets/avatar_display_widget.dart';
-import 'avatar_customization_widget.dart';
+import '../widgets/avatar_customization_widget.dart';
 
 /// Página principal del avatar
 /// Muestra el avatar del usuario y permite personalizarlo

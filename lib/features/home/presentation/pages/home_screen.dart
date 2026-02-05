@@ -266,26 +266,26 @@ class _HomeScreenState extends State<HomeScreen> {
       case 'creatividad':
         color = AppColors.skillCreatividad;
         break;
-      case 'innovación':
-        color = AppColors.skillInnovación;
+      case 'innovacion':
+        color = AppColors.skillInnovacion;
         break;
-      case 'comunicación':
-        color = AppColors.skillComunicación;
+      case 'comunicacion':
+        color = AppColors.skillComunicacion;
         break;
       case 'liderazgo':
         color = AppColors.skillLiderazgo;
         break;
-      case 'tecnología':
-        color = AppColors.skillTecnología;
+      case 'tecnologia':
+        color = AppColors.skillTecnologia;
         break;
-      case 'diseño':
-        color = AppColors.skillDiseño;
+      case 'diseno':
+        color = AppColors.skillDiseno;
         break;
-      case 'negociación':
-        color = AppColors.skillNegociación;
+      case 'negociacion':
+        color = AppColors.skillNegociacion;
         break;
-      case 'análisis':
-        color = AppColors.skillAnálisis;
+      case 'analisis':
+        color = AppColors.skillAnalisis;
         break;
       case 'estrategia':
         color = AppColors.skillEstrategia;

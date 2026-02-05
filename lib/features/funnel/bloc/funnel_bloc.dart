@@ -97,16 +97,8 @@ class FunnelBloc extends Bloc<FunnelEvent, FunnelState> {
 
       emit(state.copyWith(
         funnels: [newFunnel, ...state.funnels],
+        message: '✨ Funnel creado exitosamente',
       ));
-
-      ScaffoldMessenger.of(context).mounted
-          ? ScaffoldMessenger.of(context).showSnackBar(
-              const SnackBar(
-                content: Text('✨ Funnel creado exitosamente'),
-                backgroundColor: Colors.green,
-              ),
-            )
-          : null;
     } catch (e) {
       emit(state.copyWith(
         hasError: true,
@@ -160,16 +152,10 @@ class FunnelBloc extends Bloc<FunnelEvent, FunnelState> {
           .where((f) => f.funnelId != event.funnelId)
           .toList();
 
-      emit(state.copyWith(funnels: updatedFunnels));
-
-      ScaffoldMessenger.of(context).mounted
-          ? ScaffoldMessenger.of(context).showSnackBar(
-              const SnackBar(
-                content: Text('🗑️ Funnel eliminado'),
-                backgroundColor: Colors.red,
-              ),
-            )
-          : null;
+      emit(state.copyWith(
+        funnels: updatedFunnels,
+        message: '🗑️ Funnel eliminado',
+      ));
     } catch (e) {
       emit(state.copyWith(
         hasError: true,
@@ -252,13 +238,3 @@ class FunnelBloc extends Bloc<FunnelEvent, FunnelState> {
 }
 
 // Get context for ScaffoldMessenger
-extension on BuildContext {
-  bool get mounted {
-    try {
-      widget;
-      return true;
-    } catch (e) {
-      return false;
-    }
-  }
-}

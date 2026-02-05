@@ -602,11 +602,11 @@ class _CreateProductSheetState extends State<_CreateProductSheet> {
   String _getLevelLabel(ProductLevel level) {
     switch (level) {
       case ProductLevel.level1:
-        return 'Nivel 1 ($7-$77)';
+        return 'Nivel 1 (\$7-\$77)';
       case ProductLevel.level2:
-        return 'Nivel 2 ($97-$497)';
+        return 'Nivel 2 (\$97-\$497)';
       case ProductLevel.level3:
-        return 'Nivel 3 ($1k-$10k)';
+        return 'Nivel 3 (\$1k-\$10k)';
     }
   }
 

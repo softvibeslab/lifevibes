@@ -69,7 +69,7 @@ class LifeVibesApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MultiBlocProvider(
       providers: [
-        BlocProvider(create: (_) => AuthBloc()),
+        BlocProvider(create: (context) => AuthBloc(context.read<FirebaseAuth>())),
         BlocProvider(create: (_) => OnboardingBloc()),
         BlocProvider(
           create: (_) => AvatarBloc(firestore),

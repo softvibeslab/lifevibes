@@ -125,16 +125,8 @@ class ProductBloc extends Bloc<ProductEvent, ProductState> {
       emit(state.copyWith(
         products: updatedProducts,
         draftProducts: updatedDrafts,
+        message: '✨ Producto creado exitosamente',
       ));
-
-      ScaffoldMessenger.of(context).mounted
-          ? ScaffoldMessenger.of(context).showSnackBar(
-              const SnackBar(
-                content: Text('✨ Producto creado exitosamente'),
-                backgroundColor: Colors.green,
-              ),
-            )
-          : null;
     } catch (e) {
       emit(state.copyWith(
         hasError: true,
@@ -208,16 +200,8 @@ class ProductBloc extends Bloc<ProductEvent, ProductState> {
         products: updatedProducts,
         publishedProducts: updatedPublished,
         draftProducts: updatedDrafts,
+        message: '🗑️ Producto eliminado',
       ));
-
-      ScaffoldMessenger.of(context).mounted
-          ? ScaffoldMessenger.of(context).showSnackBar(
-              const SnackBar(
-                content: Text('🗑️ Producto eliminado'),
-                backgroundColor: Colors.red,
-              ),
-            )
-          : null;
     } catch (e) {
       emit(state.copyWith(
         hasError: true,
@@ -259,16 +243,8 @@ class ProductBloc extends Bloc<ProductEvent, ProductState> {
         products: updatedProducts,
         publishedProducts: published,
         draftProducts: drafts,
+        message: '✅ Producto publicado',
       ));
-
-      ScaffoldMessenger.of(context).mounted
-          ? ScaffoldMessenger.of(context).showSnackBar(
-              const SnackBar(
-                content: Text('✅ Producto publicado'),
-                backgroundColor: Colors.green,
-              ),
-            )
-          : null;
     } catch (e) {
       emit(state.copyWith(
         hasError: true,
@@ -328,14 +304,3 @@ class ProductBloc extends Bloc<ProductEvent, ProductState> {
   }
 }
 
-// Get context for ScaffoldMessenger
-extension on BuildContext {
-  bool get mounted {
-    try {
-      widget;
-      return true;
-    } catch (e) {
-      return false;
-    }
-  }
-}
