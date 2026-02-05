@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import '../bloc/avatar_bloc.dart';
+import '../bloc/avatar_event.dart';
 import '../models/avatar_model.dart';
 import 'avatar_display_widget.dart';
 

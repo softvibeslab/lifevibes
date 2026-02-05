@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 
 import '../../../../core/theme/app_theme.dart';
 import '../../../../features/avatar/bloc/avatar_bloc.dart';
 import '../../../../features/avatar/bloc/avatar_event.dart';
 import '../../../../features/avatar/bloc/avatar_state.dart';
 import '../../../../features/avatar/models/avatar.dart';
+import '../../../../features/avatar/models/avatar_model.dart';
 
 /// Home screen (after avatar creation)
 class HomeScreen extends StatefulWidget {
@@ -20,7 +22,10 @@ class _HomeScreenState extends State<HomeScreen> {
   void initState() {
     super.initState();
     // Load avatar data
-    context.read<AvatarBloc>().add(const AvatarLoadRequested());
+    final userId = FirebaseAuth.instance.currentUser?.uid;
+    if (userId != null) {
+      context.read<AvatarBloc>().add(AvatarLoadRequested(userId));
+    }
   }
 
   @override
@@ -37,19 +42,19 @@ class _HomeScreenState extends State<HomeScreen> {
         child: SafeArea(
           child: BlocBuilder<AvatarBloc, AvatarState>(
             builder: (context, state) {
-              if (state is AvatarLoading) {
+              if (state.isLoading) {
                 return const Center(
                   child: CircularProgressIndicator(),
                 );
-              } else if (state is AvatarError) {
+              } else if (state.hasError) {
                 return Center(
                   child: Text(
-                    'Error: ${state.message}',
+                    'Error: ${state.errorMessage ?? "Unknown error"}',
                     style: const TextStyle(color: AppColors.secondary),
                   ),
                 );
-              } else if (state is AvatarLoaded) {
-                final avatar = state.avatar;
+              } else if (state.avatarData.isNotEmpty) {
+                final avatar = Avatar.fromJson(state.avatarData, 'current');
                 return Column(
                   children: [
                     // App bar
@@ -251,7 +256,7 @@ class _HomeScreenState extends State<HomeScreen> {
             child: LinearProgressIndicator(
               value: progress,
               backgroundColor: AppColors.card,
-              valueColor: AppColors.xpGradient,
+              valueColor: const AlwaysStoppedAnimation<Color>(AppColors.xp),
             ),
           ),
         ),
