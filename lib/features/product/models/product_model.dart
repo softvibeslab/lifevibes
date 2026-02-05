@@ -1,3 +1,5 @@
+import 'package:flutter/material.dart';
+
 /// Modelos para el sistema de productos (Products) de LifeVibes
 /// Escalera de Valor: DBY → DWY → DFY
 

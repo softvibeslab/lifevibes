@@ -18,7 +18,7 @@ class AvatarDisplayWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    Widget result = Container(
       width: size,
       height: size,
       decoration: BoxDecoration(
@@ -35,7 +35,12 @@ class AvatarDisplayWidget extends StatelessWidget {
       child: ClipOval(
         child: _buildAvatar(),
       ),
-    ).then((value) => animate ? value.animate().fadeIn(duration: 500.ms) : value);
+    );
+
+    if (animate) {
+      return result.animate().fadeIn(duration: 500.ms);
+    }
+    return result;
   }
 
   Widget _buildAvatar() {

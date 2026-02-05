@@ -4,6 +4,7 @@ import 'package:flutter_animate/flutter_animate.dart';
 import '../bloc/coach_chat_bloc.dart';
 import '../bloc/coach_chat_event.dart';
 import '../bloc/coach_chat_state.dart';
+import '../models/poppy_message.dart';
 
 /// Widget de chat con el coach virtual PoppyAI
 class CoachChatWidget extends StatefulWidget {
@@ -232,7 +233,6 @@ class _CoachChatWidgetState extends State<CoachChatWidget> {
       ),
     ).animate().scale(
       duration: 600.ms,
-      repeat: true,
       begin: const Offset(1, 1),
       end: const Offset(1.5, 1.5),
       curve: Curves.easeInOut,

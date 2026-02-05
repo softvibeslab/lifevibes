@@ -39,7 +39,7 @@ class FunnelListWidget extends StatelessWidget {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          const Icon(Icons.funnel_chart, size: 64, color: Colors.grey),
+          const Icon(Icons.filter_alt, size: 64, color: Colors.grey),
           const SizedBox(height: 16),
           Text(
             'No hay funnels creados',
