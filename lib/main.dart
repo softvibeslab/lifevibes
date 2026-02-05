@@ -5,25 +5,25 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import 'core/constants/firebase_constants.dart';
-import 'core/theme/app_theme.dart';
-import 'features/auth/bloc/auth_bloc.dart';
-import 'features/onboarding/bloc/onboarding_bloc.dart';
-import 'features/avatar/bloc/avatar_bloc.dart';
-import 'features/poppy/bloc/coach_chat_bloc.dart';
-import 'features/poppy/services/poppy_service.dart';
-import 'features/match/bloc/match_bloc.dart';
-import 'features/quest/bloc/quest_bloc.dart';
-import 'features/funnel/bloc/funnel_bloc.dart';
-import 'features/product/bloc/product_bloc.dart';
-import 'features/onboarding/presentation/pages/onboarding_screen.dart';
-import 'features/avatar/pages/avatar_page.dart';
-import 'features/poppy/pages/coach_page.dart';
-import 'features/match/pages/match_page.dart';
-import 'features/quest/pages/quest_page.dart';
-import 'features/funnel/pages/funnel_page.dart';
-import 'features/product/pages/product_page.dart';
-import 'features/home/presentation/pages/home_screen.dart';
+import 'package:lifevibes/core/constants/firebase_constants.dart';
+import 'package:lifevibes/core/theme/app_theme.dart';
+import 'package:lifevibes/features/auth/bloc/auth_bloc.dart';
+import 'package:lifevibes/features/onboarding/bloc/onboarding_bloc.dart';
+import 'package:lifevibes/features/avatar/bloc/avatar_bloc.dart';
+import 'package:lifevibes/features/poppy/bloc/coach_chat_bloc.dart';
+import 'package:lifevibes/features/poppy/services/poppy_service.dart';
+import 'package:lifevibes/features/match/bloc/match_bloc.dart';
+import 'package:lifevibes/features/quest/bloc/quest_bloc.dart';
+import 'package:lifevibes/features/funnel/bloc/funnel_bloc.dart';
+import 'package:lifevibes/features/product/bloc/product_bloc.dart';
+import 'package:lifevibes/features/onboarding/presentation/pages/onboarding_screen.dart';
+import 'package:lifevibes/features/avatar/pages/avatar_page.dart';
+import 'package:lifevibes/features/poppy/pages/coach_page.dart';
+import 'package:lifevibes/features/match/pages/match_page.dart';
+import 'package:lifevibes/features/quest/pages/quest_page.dart';
+import 'package:lifevibes/features/funnel/pages/funnel_page.dart';
+import 'package:lifevibes/features/product/pages/product_page.dart';
+import 'package:lifevibes/features/home/presentation/pages/home_screen.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -69,7 +69,7 @@ class LifeVibesApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MultiBlocProvider(
       providers: [
-        BlocProvider(create: (context) => AuthBloc(context.read<FirebaseAuth>())),
+        BlocProvider(create: (_) => AuthBloc(auth)),
         BlocProvider(create: (_) => OnboardingBloc()),
         BlocProvider(
           create: (_) => AvatarBloc(firestore),
