@@ -2,6 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import '../bloc/avatar_bloc.dart';
+import '../bloc/avatar_event.dart';
+import '../bloc/avatar_state.dart';
+import '../models/avatar_model.dart';
 import '../widgets/avatar_display_widget.dart';
 import '../widgets/avatar_customization_widget.dart';
 

@@ -1,5 +1,10 @@
 import 'package:equatable/equatable.dart';
 
+/// Firebase constants for the app
+class FirebaseConstants {
+  static const int xpPerLevel = 100;
+}
+
 /// Avatar model
 class Avatar extends Equatable {
   final String id;

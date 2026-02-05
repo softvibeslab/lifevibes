@@ -141,6 +141,26 @@ class MatchModel {
     if (matchScore >= 40) return 'Baja';
     return 'Muy Baja';
   }
+
+  MatchModel copyWith({
+    String? matchId,
+    String? userId1,
+    String? userId2,
+    int? matchScore,
+    DateTime? matchDate,
+    String? status,
+    MatchBreakdown? breakdown,
+  }) {
+    return MatchModel(
+      matchId: matchId ?? this.matchId,
+      userId1: userId1 ?? this.userId1,
+      userId2: userId2 ?? this.userId2,
+      matchScore: matchScore ?? this.matchScore,
+      matchDate: matchDate ?? this.matchDate,
+      status: status ?? this.status,
+      breakdown: breakdown ?? this.breakdown,
+    );
+  }
 }
 
 /// Desglose del puntaje de match
