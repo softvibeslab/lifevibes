@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:lifevibes/features/avatar/bloc/funnel_bloc.dart';
-import 'package:lifevibes/features/avatar/bloc/funnel_event.dart';
-import 'package:lifevibes/features/avatar/bloc/funnel_state.dart';
-import 'package:lifevibes/features/avatar/widgets/funnel_widgets.dart';
+import 'package:lifevibes/features/funnel/bloc/funnel_bloc.dart';
+import 'package:lifevibes/features/funnel/bloc/funnel_event.dart';
+import 'package:lifevibes/features/funnel/bloc/funnel_state.dart';
+import 'package:lifevibes/features/funnel/widgets/funnel_widgets.dart';
 
 /// Página principal del sistema de funnels
 class FunnelPage extends StatefulWidget {

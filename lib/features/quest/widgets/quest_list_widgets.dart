@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_animate/flutter_animate.dart';
-import 'package:lifevibes/features/avatar/bloc/quest_bloc.dart';
-import 'package:lifevibes/features/avatar/bloc/quest_event.dart';
-import 'package:lifevibes/features/avatar/bloc/quest_state.dart';
+import 'package:lifevibes/features/quest/bloc/quest_bloc.dart';
+import 'package:lifevibes/features/quest/bloc/quest_event.dart';
+import 'package:lifevibes/features/quest/bloc/quest_state.dart';
 import 'package:lifevibes/features/quest/models/quest_model.dart';
 
 /// Widget para mostrar lista de misiones activas

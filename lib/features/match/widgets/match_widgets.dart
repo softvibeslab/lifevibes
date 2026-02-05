@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_animate/flutter_animate.dart';
-import 'package:lifevibes/features/avatar/bloc/match_bloc.dart';
-import 'package:lifevibes/features/avatar/bloc/match_event.dart';
-import 'package:lifevibes/features/avatar/bloc/match_state.dart';
+import 'package:lifevibes/features/match/bloc/match_bloc.dart';
+import 'package:lifevibes/features/match/bloc/match_event.dart';
+import 'package:lifevibes/features/match/bloc/match_state.dart';
 import 'package:lifevibes/features/match/models/match_model.dart';
 
 /// Widget de Tinder-like swipe para matches

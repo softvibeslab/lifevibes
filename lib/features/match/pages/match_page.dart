@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:lifevibes/features/avatar/bloc/match_bloc.dart';
-import 'package:lifevibes/features/avatar/bloc/match_event.dart';
-import 'package:lifevibes/features/avatar/bloc/match_state.dart';
-import 'package:lifevibes/features/avatar/widgets/match_widgets.dart';
+import 'package:lifevibes/features/match/bloc/match_bloc.dart';
+import 'package:lifevibes/features/match/bloc/match_event.dart';
+import 'package:lifevibes/features/match/bloc/match_state.dart';
+import 'package:lifevibes/features/match/widgets/match_widgets.dart';
 
 /// Página principal del sistema de matches
 class MatchPage extends StatefulWidget {
