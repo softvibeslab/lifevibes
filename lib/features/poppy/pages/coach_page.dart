@@ -48,7 +48,7 @@ class _CoachPageState extends State<CoachPage> with TickerProviderStateMixin {
             Tab(text: 'Chat', icon: Icon(Icons.chat)),
             Tab(text: 'Manifiesto', icon: Icon(Icons.description)),
             Tab(text: 'Estrategia', icon: Icon(Icons.lightbulb)),
-            Tab(text: 'Análisis', icon: Icon(Icons.analytics)),
+            Tab(text: 'Análisis', icon: Icon(Icons.bar_chart)),
           ],
         ),
       ),
