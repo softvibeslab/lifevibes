@@ -1,3 +1,5 @@
+import 'package:flutter/material.dart';
+
 /// Modelos para el sistema de misiones (Quests) de LifeVibes
 /// Misiones basadas en la metodología Softvibes1
 
@@ -5,6 +7,7 @@
 enum QuestType {
   daily,      // Misión diaria
   weekly,     // Misión semanal
+  monthly,    // Misión mensual
   milestone,  // Milestone importante
   challenge,  // Desafío especial
 }

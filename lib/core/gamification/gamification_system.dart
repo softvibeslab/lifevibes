@@ -1,3 +1,5 @@
+import 'package:flutter/material.dart';
+
 /// Sistema centralizado de gamificación para LifeVibes
 /// Maneja niveles, XP, badges, y recompensas
 

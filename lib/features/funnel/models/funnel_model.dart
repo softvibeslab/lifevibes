@@ -1,3 +1,5 @@
+import 'package:flutter/material.dart';
+
 /// Modelos para el sistema de embudos (Funnels) de LifeVibes
 /// Webinar funnels, quest sequences, y funnels de conversión
 
