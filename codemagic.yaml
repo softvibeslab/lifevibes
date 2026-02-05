@@ -13,6 +13,9 @@ workflows:
       # Asegurar que se use la version correcte de Flutter
       flutter: "stable"
 
+      # Configurar Java 17 para AGP 8.7+
+      xcode: 15.0
+
     scripts:
       # Mostrar informacion del entorno
       - name: Build info
