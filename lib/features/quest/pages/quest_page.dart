@@ -2,11 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import '../bloc/quest_bloc.dart';
-import '../bloc/quest_event.dart';
-import '../bloc/quest_state.dart';
-import '../widgets/daily_quest_widget.dart';
-import '../widgets/quest_list_widgets.dart';
+import 'package:lifevibes/features/avatar/bloc/quest_bloc.dart';
+import 'package:lifevibes/features/avatar/bloc/quest_event.dart';
+import 'package:lifevibes/features/avatar/bloc/quest_state.dart';
+import 'package:lifevibes/features/avatar/widgets/daily_quest_widget.dart';
+import 'package:lifevibes/features/avatar/widgets/quest_list_widgets.dart';
 
 /// Página principal del sistema de misiones (Quests)
 class QuestPage extends StatefulWidget {

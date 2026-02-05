@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import '../bloc/product_bloc.dart';
-import '../bloc/product_event.dart';
-import '../bloc/product_state.dart';
-import '../widgets/product_widgets.dart';
+import 'package:lifevibes/features/product/bloc/product_bloc.dart';
+import 'package:lifevibes/features/product/bloc/product_event.dart';
+import 'package:lifevibes/features/product/bloc/product_state.dart';
+import 'package:lifevibes/features/product/widgets/product_widgets.dart';
 
 /// Página principal del sistema de productos (Products)
 class ProductPage extends StatefulWidget {

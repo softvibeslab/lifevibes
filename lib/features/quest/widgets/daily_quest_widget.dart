@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_animate/flutter_animate.dart';
-import '../bloc/quest_bloc.dart';
-import '../bloc/quest_event.dart';
-import '../bloc/quest_state.dart';
-import '../models/quest_model.dart';
+import 'package:lifevibes/features/avatar/bloc/quest_bloc.dart';
+import 'package:lifevibes/features/avatar/bloc/quest_event.dart';
+import 'package:lifevibes/features/avatar/bloc/quest_state.dart';
+import 'package:lifevibes/features/avatar/models/quest_model.dart';
 
 /// Widget para mostrar la misión diaria
 class DailyQuestWidget extends StatelessWidget {

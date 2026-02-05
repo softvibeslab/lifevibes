@@ -3,10 +3,10 @@ import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 
-import '../../../../core/theme/app_theme.dart';
-import '../../../../features/home/presentation/pages/home_screen.dart';
-import '../../data/avatar_service.dart';
-import '../../models/avatar.dart';
+import 'package:lifevibes/core/theme/app_theme.dart';
+import 'package:lifevibes/features/home/presentation/pages/home_screen.dart';
+import 'package:lifevibes/features/avatar/data/avatar_service.dart';
+import 'package:lifevibes/features/avatar/models/avatar.dart';
 
 /// Avatar creation screen (La Forja del Superpoder)
 class AvatarCreationScreen extends StatefulWidget {

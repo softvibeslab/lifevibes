@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_animate/flutter_animate.dart';
-import '../bloc/funnel_bloc.dart';
-import '../bloc/funnel_event.dart';
-import '../bloc/funnel_state.dart';
-import '../models/funnel_model.dart';
+import 'package:lifevibes/features/avatar/bloc/funnel_bloc.dart';
+import 'package:lifevibes/features/avatar/bloc/funnel_event.dart';
+import 'package:lifevibes/features/avatar/bloc/funnel_state.dart';
+import 'package:lifevibes/features/avatar/models/funnel_model.dart';
 
 /// Widget para mostrar lista de funnels
 class FunnelListWidget extends StatelessWidget {

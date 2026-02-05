@@ -1,5 +1,5 @@
 import 'package:equatable/equatable.dart';
-import '../models/quest_model.dart';
+import 'package:lifevibes/features/avatar/models/quest_model.dart';
 
 class QuestState extends Equatable {
   final bool isLoading;

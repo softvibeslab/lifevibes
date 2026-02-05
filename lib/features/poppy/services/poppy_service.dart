@@ -1,7 +1,7 @@
 import 'dart:convert';
 import 'package:dio/dio.dart';
-import '../config/poppy_config.dart';
-import '../models/poppy_message.dart';
+import 'package:lifevibes/features/poppy/config/poppy_config.dart';
+import 'package:lifevibes/features/poppy/models/poppy_message.dart';
 
 /// Servicio para interactuar con PoppyAI API
 class PoppyService {

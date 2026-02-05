@@ -1,8 +1,8 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 
-import '../models/avatar.dart';
-import '../../core/constants/firebase_constants.dart';
+import 'package:lifevibes/features/avatar/models/avatar.dart';
+import 'package:lifevibes/core/constants/firebase_constants.dart';
 
 /// Avatar service for Firebase Firestore operations
 class AvatarService {

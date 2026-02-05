@@ -1,5 +1,5 @@
 import 'package:equatable/equatable.dart';
-import '../models/product_model.dart';
+import 'package:lifevibes/features/product/models/product_model.dart';
 
 class ProductState extends Equatable {
   final bool isLoading;

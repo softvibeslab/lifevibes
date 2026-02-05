@@ -1,5 +1,5 @@
 import 'package:equatable/equatable.dart';
-import '../models/poppy_message.dart';
+import 'package:lifevibes/features/avatar/models/poppy_message.dart';
 
 class CoachChatState extends Equatable {
   final List<PoppyMessage> messages;

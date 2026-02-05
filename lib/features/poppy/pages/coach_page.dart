@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import '../bloc/coach_chat_bloc.dart';
-import '../bloc/coach_chat_event.dart';
-import '../bloc/coach_chat_state.dart';
-import '../models/poppy_message.dart';
-import '../widgets/coach_chat_widget.dart';
+import 'package:lifevibes/features/avatar/bloc/coach_chat_bloc.dart';
+import 'package:lifevibes/features/avatar/bloc/coach_chat_event.dart';
+import 'package:lifevibes/features/avatar/bloc/coach_chat_state.dart';
+import 'package:lifevibes/features/avatar/models/poppy_message.dart';
+import 'package:lifevibes/features/avatar/widgets/coach_chat_widget.dart';
 import 'coach_manifesto_page.dart';
 import 'coach_strategy_page.dart';
 

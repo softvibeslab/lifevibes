@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import '../bloc/avatar_bloc.dart';
-import '../bloc/avatar_event.dart';
-import '../models/avatar_model.dart';
-import 'avatar_display_widget.dart';
+import 'package:lifevibes/features/avatar/bloc/avatar_bloc.dart';
+import 'package:lifevibes/features/avatar/bloc/avatar_event.dart';
+import 'package:lifevibes/features/avatar/models/avatar_model.dart';
+import 'package:lifevibes/features/avatar/widgets/avatar_display_widget.dart';
 
 /// Widget para personalizar el avatar
 /// Permite cambiar cara, ojos, boca, pelo, ropa y accesorios

@@ -1,5 +1,5 @@
 import 'package:equatable/equatable.dart';
-import '../models/funnel_model.dart';
+import 'package:lifevibes/features/funnel/models/funnel_model.dart';
 
 class FunnelState extends Equatable {
   final bool isLoading;

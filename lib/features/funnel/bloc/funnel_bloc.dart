@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import '../models/funnel_model.dart';
+import 'package:lifevibes/features/funnel/models/funnel_model.dart';
 import 'funnel_event.dart';
 import 'funnel_state.dart';
 

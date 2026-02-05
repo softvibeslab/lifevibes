@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_animate/flutter_animate.dart';
-import '../bloc/coach_chat_bloc.dart';
-import '../bloc/coach_chat_event.dart';
-import '../bloc/coach_chat_state.dart';
-import '../models/poppy_message.dart';
+import 'package:lifevibes/features/avatar/bloc/coach_chat_bloc.dart';
+import 'package:lifevibes/features/avatar/bloc/coach_chat_event.dart';
+import 'package:lifevibes/features/avatar/bloc/coach_chat_state.dart';
+import 'package:lifevibes/features/avatar/models/poppy_message.dart';
 
 /// Widget de chat con el coach virtual PoppyAI
 class CoachChatWidget extends StatefulWidget {

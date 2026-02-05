@@ -1,5 +1,5 @@
 import 'package:equatable/equatable.dart';
-import '../models/match_model.dart';
+import 'package:lifevibes/features/avatar/models/match_model.dart';
 
 abstract class MatchEvent extends Equatable {
   const MatchEvent();

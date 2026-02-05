@@ -1,6 +1,6 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
-import '../models/poppy_message.dart';
-import '../services/poppy_service.dart';
+import 'package:lifevibes/features/poppy/services/poppy_service.dart';
+import 'package:lifevibes/features/poppy/models/poppy_message.dart';
 import 'coach_chat_event.dart';
 import 'coach_chat_state.dart';
 

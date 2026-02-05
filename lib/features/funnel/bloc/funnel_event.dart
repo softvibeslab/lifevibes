@@ -1,5 +1,5 @@
 import 'package:equatable/equatable.dart';
-import '../models/funnel_model.dart';
+import 'package:lifevibes/features/avatar/models/funnel_model.dart';
 
 abstract class FunnelEvent extends Equatable {
   const FunnelEvent();

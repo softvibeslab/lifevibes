@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
-import '../models/avatar_model.dart';
+import 'package:lifevibes/features/avatar/models/avatar_model.dart';
 
 /// Widget para mostrar el avatar del usuario
 /// Muestra el avatar con animaciones suaves
