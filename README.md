@@ -129,6 +129,40 @@ Un avatar personalizado que:
 - `SPRINT_5_6_COMPLETE.md` - Progreso Sprint 5-6
 - `SPRINT_3_4_COMPLETE.md` - Progreso Sprint 3-4
 - `IMPLEMENTATION_PROGRESS.md` - Progreso Sprint 1-2
+- `docs/BUILD_ANDROID.md` - Guía de compilación Android
+
+## 📱 Build & Deployment
+
+### Compilar APK Android
+
+```bash
+# Opción 1: Usar el script automatizado
+./scripts/build-android.sh debug
+
+# Opción 2: Comando directo
+flutter build apk --release
+
+# El APK se genera en:
+# build/app/outputs/flutter-apk/app-release.apk
+```
+
+### Instalar en Dispositivo
+
+```bash
+# Via ADB
+adb install build/app/outputs/flutter-apk/app-release.apk
+
+# O ejecutar directamente
+flutter run
+```
+
+### Instrucciones Detalladas
+
+Ver `docs/BUILD_ANDROID.md` para guía completa de:
+- Configuración de Android Studio
+- Creación de keystore para release
+- Generación de App Bundle (Google Play)
+- Solución de problemas
 
 ## Equipo
 
