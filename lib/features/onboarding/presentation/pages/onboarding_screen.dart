@@ -2,11 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 
-import '../../core/theme/app_theme.dart';
+import '../../../core/theme/app_theme.dart';
 import '../../../auth/bloc/auth_bloc.dart';
-import '../../onboarding/bloc/onboarding_bloc.dart';
-import '../../onboarding/bloc/onboarding_event.dart';
-import '../../onboarding/bloc/onboarding_state.dart';
+import '../../../onboarding/bloc/onboarding_bloc.dart';
+import '../../../onboarding/bloc/onboarding_event.dart';
+import '../../../onboarding/bloc/onboarding_state.dart';
 
 /// Onboarding screen (Ritual de Origen)
 class OnboardingScreen extends StatefulWidget {

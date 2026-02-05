@@ -387,7 +387,7 @@ Escribe cada componente. No necesitas implementarlo todavía.
 3. Crea una landing page básica
 4. Haz 3 ventas
 
-Tip: Empieza pequeño. Un $7 ebook es mejor que un producto perfecto que nunca lanza.
+Tip: Empieza pequeño. Un \$7 ebook es mejor que un producto perfecto que nunca lanza.
 ''',
           type: QuestType.milestone,
           phase: QuestPhase.tener,

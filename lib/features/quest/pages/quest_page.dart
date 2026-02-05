@@ -53,7 +53,7 @@ class _QuestPageState extends State<QuestPage> with SingleTickerProviderStateMix
           unselectedLabelColor: Colors.white70,
           tabs: const [
             Tab(text: 'Hoy', icon: Icon(Icons.today)),
-            Tab(text: 'Activas', icon: Icon(Icons.list))),
+            Tab(text: 'Activas', icon: Icon(Icons.list)),
             Tab(text: 'Historial', icon: Icon(Icons.history)),
           ],
         ),

@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../../core/theme/app_theme.dart';
-import '../../avatar/bloc/avatar_bloc.dart';
-import '../../avatar/bloc/avatar_event.dart';
-import '../../avatar/bloc/avatar_state.dart';
-import '../../avatar/models/avatar.dart';
+import '../../../avatar/bloc/avatar_bloc.dart';
+import '../../../avatar/bloc/avatar_event.dart';
+import '../../../avatar/bloc/avatar_state.dart';
+import '../../../avatar/models/avatar.dart';
 
 /// Home screen (after avatar creation)
 class HomeScreen extends StatefulWidget {

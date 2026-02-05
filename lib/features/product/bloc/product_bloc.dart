@@ -152,7 +152,7 @@ class ProductBloc extends Bloc<ProductEvent, ProductState> {
       final updatedProducts = state.products.map((p) {
         if (p.productId == event.productId) {
           return p.copyWith(
-            ...event.updates,
+            event.updates,
             updatedAt: DateTime.now(),
           );
         }

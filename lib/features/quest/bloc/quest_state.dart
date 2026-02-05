@@ -5,6 +5,7 @@ class QuestState extends Equatable {
   final bool isLoading;
   final bool hasError;
   final String? errorMessage;
+  final String? message;
   final List<QuestModel> activeQuests;
   final List<QuestModel> completedQuests;
   final QuestModel? currentDailyQuest;

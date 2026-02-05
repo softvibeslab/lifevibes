@@ -124,7 +124,7 @@ class FunnelBloc extends Bloc<FunnelEvent, FunnelState> {
       final updatedFunnels = state.funnels.map((f) {
         if (f.funnelId == event.funnelId) {
           return f.copyWith(
-            ...event.updates,
+            event.updates,
             updatedAt: DateTime.now(),
           );
         }
