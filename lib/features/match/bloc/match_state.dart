@@ -1,5 +1,5 @@
 import 'package:equatable/equatable.dart';
-import 'package:lifevibes/features/avatar/models/match_model.dart';
+import 'package:lifevibes/features/match/models/match_model.dart';
 
 class MatchState extends Equatable {
   final bool isLoading;
