@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_animate/flutter_animate.dart';
 
 import '../../../../core/theme/app_theme.dart';
+import '../../../../features/home/presentation/pages/home_screen.dart';
 import '../../data/avatar_service.dart';
 import '../../models/avatar.dart';
 

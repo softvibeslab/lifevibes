@@ -1,7 +1,5 @@
-import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import '../../avatar/presentation/pages/avatar_creation_screen.dart';
 import 'onboarding_event.dart';
 import 'onboarding_state.dart';
 
@@ -121,14 +119,5 @@ class OnboardingBloc extends Bloc<OnboardingEvent, OnboardingState> {
     Emitter<OnboardingState> emit,
   ) async {
     emit(const OnboardingCompleted());
-    
-    // Navigate to avatar creation screen
-    if (mounted) {
-      Navigator.of(context).pushReplacement(
-        MaterialPageRoute(
-          builder: (_) => const AvatarCreationScreen(),
-        ),
-      );
-    }
   }
 }
