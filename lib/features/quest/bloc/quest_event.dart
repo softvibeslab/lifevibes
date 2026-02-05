@@ -1,5 +1,5 @@
 import 'package:equatable/equatable.dart';
-import 'package:lifevibes/features/avatar/models/quest_model.dart';
+import 'package:lifevibes/features/quest/models/quest_model.dart';
 
 abstract class QuestEvent extends Equatable {
   const QuestEvent();

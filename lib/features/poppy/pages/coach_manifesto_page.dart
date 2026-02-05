@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:lifevibes/features/avatar/bloc/coach_chat_bloc.dart';
-import 'package:lifevibes/features/avatar/bloc/coach_chat_event.dart';
-import 'package:lifevibes/features/avatar/bloc/coach_chat_state.dart';
+import 'package:lifevibes/features/poppy/bloc/coach_chat_bloc.dart';
+import 'package:lifevibes/features/poppy/bloc/coach_chat_event.dart';
+import 'package:lifevibes/features/poppy/bloc/coach_chat_state.dart';
 
 /// Página para generar el manifiesto de marca
 class CoachManifestoPage extends StatefulWidget {
