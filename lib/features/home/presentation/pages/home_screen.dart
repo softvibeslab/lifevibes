@@ -54,7 +54,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   ),
                 );
               } else if (state.avatarData.isNotEmpty) {
-                final avatar = Avatar.fromJson(state.avatarData, 'current');
+                final avatar = Avatar.fromDocument(state.avatarData, 'current');
                 return Column(
                   children: [
                     // App bar
