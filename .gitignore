@@ -128,7 +128,6 @@ firebase-debug.log
 
 # Local configuration (DO NOT COMMIT)
 lib/core/constants/firebase_constants.dart
-lib/features/poppy/config/poppy_config.dart
 
 # Backup files
 *.old
