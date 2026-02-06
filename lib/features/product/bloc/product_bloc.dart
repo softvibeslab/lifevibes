@@ -148,26 +148,11 @@ class ProductBloc extends Bloc<ProductEvent, ProductState> {
         'updatedAt': FieldValue.serverTimestamp(),
       });
 
-      // Update local state
-      final updatedProducts = state.products.map((p) {
-        if (p.productId == event.productId) {
-          return p.copyWith(
-            event.updates,
-            updatedAt: DateTime.now(),
-          );
-        }
-        return p;
-      }).toList();
-
-      // Re-categorize
-      final published = updatedProducts.where((p) => p.isPublished).toList();
-      final drafts = updatedProducts.where((p) => p.isDraft).toList();
-
-      emit(state.copyWith(
-        products: updatedProducts,
-        publishedProducts: published,
-        draftProducts: drafts,
-      ));
+      // Reload products to get updated data
+      final currentUserId = _auth.currentUser?.uid;
+      if (currentUserId != null) {
+        add(ProductsLoadRequested(currentUserId));
+      }
     } catch (e) {
       emit(state.copyWith(
         hasError: true,

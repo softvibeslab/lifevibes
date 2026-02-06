@@ -4,7 +4,7 @@ import 'package:lifevibes/features/poppy/bloc/coach_chat_bloc.dart';
 import 'package:lifevibes/features/poppy/bloc/coach_chat_event.dart';
 import 'package:lifevibes/features/poppy/bloc/coach_chat_state.dart';
 import 'package:lifevibes/features/poppy/models/poppy_message.dart';
-import 'package:lifevibes/features/avatar/widgets/coach_chat_widget.dart';
+import 'package:lifevibes/features/poppy/widgets/coach_chat_widget.dart';
 import 'coach_manifesto_page.dart';
 import 'coach_strategy_page.dart';
 
