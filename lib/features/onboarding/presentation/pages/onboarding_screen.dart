@@ -37,7 +37,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
       );
     } else {
       context.read<OnboardingBloc>().add(const OnboardingComplete());
-      context.read<AuthBloc>().add(const AuthLoginRequested(
+      context.read<AuthBloc>().add(AuthLoginRequested(
             email: 'demo@lifevibes.com',
             password: 'demo123',
           ));

@@ -45,7 +45,7 @@ class FunnelBloc extends Bloc<FunnelEvent, FunnelState> {
           .get();
 
       // Parse funnels
-      final funnels = funnelsSnapshot.docs.map((doc) {
+      final funnels = funnelsSnapshot.docs.map<FunnelModel>((doc) {
         final data = doc.data();
         return FunnelModel.fromJson({
           ...data,
@@ -121,12 +121,12 @@ class FunnelBloc extends Bloc<FunnelEvent, FunnelState> {
       });
 
       // Update local state
-      final updatedFunnels = state.funnels.map((f) {
+      final updatedFunnels = state.funnels.map<FunnelModel>((f) {
         if (f.funnelId == event.funnelId) {
-          return f.copyWith(
-            event.updates,
-            updatedAt: DateTime.now(),
-          );
+          return f.copyWithUpdates({
+            ...event.updates,
+            'updatedAt': DateTime.now(),
+          });
         }
         return f;
       }).toList();
@@ -173,7 +173,7 @@ class FunnelBloc extends Bloc<FunnelEvent, FunnelState> {
         (f) => f.funnelId == event.funnelId,
       );
 
-      final updatedSteps = funnel.steps.map((step) {
+      final updatedSteps = funnel.steps.map<FunnelStep>((step) {
         if (step.stepId == event.step.stepId) {
           return event.step;
         }
@@ -189,7 +189,7 @@ class FunnelBloc extends Bloc<FunnelEvent, FunnelState> {
       });
 
       // Update local state
-      final updatedFunnels = state.funnels.map((f) {
+      final updatedFunnels = state.funnels.map<FunnelModel>((f) {
         if (f.funnelId == event.funnelId) {
           return f.copyWith(steps: updatedSteps);
         }

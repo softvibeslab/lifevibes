@@ -280,6 +280,30 @@ class FunnelModel {
 
   // Getters útiles
   bool get isDraft => status == FunnelStatus.draft;
+
+  /// Crea una copia con actualizaciones parciales desde un Map
+  FunnelModel copyWithUpdates(Map<String, dynamic> updates) {
+    return FunnelModel(
+      funnelId: funnelId,
+      userId: userId,
+      title: updates['title'] as String? ?? title,
+      description: updates['description'] as String? ?? description,
+      type: updates['type'] != null
+          ? _parseFunnelType(updates['type'] as String? ?? type.name)
+          : type,
+      status: updates['status'] != null
+          ? _parseFunnelStatus(updates['status'] as String? ?? status.name)
+          : status,
+      steps: steps,
+      metrics: metrics,
+      targetProduct: updates['targetProduct'] as String? ?? targetProduct,
+      leadMagnet: updates['leadMagnet'] as String? ?? leadMagnet,
+      createdAt: createdAt,
+      updatedAt: updates['updatedAt'] as DateTime? ?? updatedAt,
+      startDate: updates['startDate'] as DateTime? ?? startDate,
+      endDate: updates['endDate'] as DateTime? ?? endDate,
+    );
+  }
   bool get isActive => status == FunnelStatus.active;
   bool get isPaused => status == FunnelStatus.paused;
   bool get isCompleted => status == FunnelStatus.completed;

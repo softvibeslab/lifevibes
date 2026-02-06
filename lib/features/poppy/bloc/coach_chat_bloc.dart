@@ -1,6 +1,7 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:lifevibes/features/poppy/services/poppy_service.dart';
 import 'package:lifevibes/features/poppy/models/poppy_message.dart';
+import 'package:lifevibes/features/poppy/models/poppy_message.dart' as msgs;
 import 'coach_chat_event.dart';
 import 'coach_chat_state.dart';
 
@@ -29,7 +30,7 @@ class CoachChatBloc extends Bloc<CoachChatEvent, CoachChatState> {
     try {
       final response = await _poppyService.sendMessage(
         messages: [],
-        systemPrompt: PoppyPrompts.systemPrompt,
+        systemPrompt: msgs.PoppyPrompts.systemPrompt,
       );
 
       if (response.success) {

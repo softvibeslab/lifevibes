@@ -61,7 +61,7 @@ class QuestBloc extends Bloc<QuestEvent, QuestState> {
           .get();
 
       // Parse quests
-      final allQuests = questsSnapshot.docs.map((doc) {
+      final allQuests = questsSnapshot.docs.map<QuestModel>((doc) {
         final data = doc.data();
         return QuestModel.fromJson({
           ...data,
@@ -150,7 +150,7 @@ class QuestBloc extends Bloc<QuestEvent, QuestState> {
           .update({'status': 'in_progress'});
 
       // Update local state
-      final updatedQuests = state.activeQuests.map((q) {
+      final updatedQuests = state.activeQuests.map<QuestModel>((q) {
         if (q.questId == event.questId) {
           return q.copyWith(status: 'in_progress');
         }

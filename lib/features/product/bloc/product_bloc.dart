@@ -46,7 +46,7 @@ class ProductBloc extends Bloc<ProductEvent, ProductState> {
           .get();
 
       // Parse products
-      final products = productsSnapshot.docs.map((doc) {
+      final products = productsSnapshot.docs.map<ProductModel>((doc) {
         final data = doc.data();
         return ProductModel.fromJson({
           ...data,
@@ -210,7 +210,7 @@ class ProductBloc extends Bloc<ProductEvent, ProductState> {
       });
 
       // Update local state
-      final updatedProducts = state.products.map((p) {
+      final updatedProducts = state.products.map<ProductModel>((p) {
         if (p.productId == event.productId) {
           return p.copyWith(
             status: ProductStatus.published,
@@ -252,7 +252,7 @@ class ProductBloc extends Bloc<ProductEvent, ProductState> {
       });
 
       // Update local state
-      final updatedProducts = state.products.map((p) {
+      final updatedProducts = state.products.map<ProductModel>((p) {
         if (p.productId == event.productId) {
           return p.copyWith(
             status: ProductStatus.archived,
