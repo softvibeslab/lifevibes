@@ -1,8 +1,8 @@
 import 'dart:convert';
 import 'package:dio/dio.dart';
 import 'package:lifevibes/features/poppy/config/poppy_config.dart';
-import 'package:lifevibes/features/poppy/models/poppy_message.dart';
-import 'package:lifevibes/features/poppy/models/poppy_message.dart' as msgs;
+import 'package:lifevibes/features/poppy/models/poppy_message.dart'
+    show PoppyMessage, PoppyResponse, PoppyPrompts;
 
 /// Servicio para interactuar con PoppyAI API
 class PoppyService {
@@ -92,7 +92,7 @@ class PoppyService {
     required String proposito,
     required String superpoder,
   }) async {
-    final prompt = msgs.PoppyPrompts.generateManifestoPrompt(
+    final prompt = PoppyPrompts.generateManifestoPrompt(
       usuario,
       valores,
       proposito,
@@ -112,7 +112,7 @@ class PoppyService {
     required String audiencia,
     required List<String> pilares,
   }) async {
-    final prompt = msgs.PoppyPrompts.generateContentStrategyPrompt(
+    final prompt = PoppyPrompts.generateContentStrategyPrompt(
       nicho,
       audiencia,
       pilares,
@@ -129,7 +129,7 @@ class PoppyService {
   Future<PoppyResponse> analyzeSituation({
     required String situacion,
   }) async {
-    final prompt = msgs.PoppyPrompts.analyzeSituationPrompt(situacion);
+    final prompt = PoppyPrompts.analyzeSituationPrompt(situacion);
 
     return await sendMessage(
       messages: [
@@ -151,7 +151,7 @@ class PoppyService {
 
     return await sendMessage(
       messages: updatedHistory,
-      systemPrompt: msgs.PoppyPrompts.systemPrompt,
+      systemPrompt: PoppyPrompts.systemPrompt,
     );
   }
 }

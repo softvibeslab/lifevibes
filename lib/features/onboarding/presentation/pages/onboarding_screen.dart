@@ -4,6 +4,7 @@ import 'package:flutter_animate/flutter_animate.dart';
 
 import 'package:lifevibes/core/theme/app_theme.dart';
 import 'package:lifevibes/features/auth/bloc/auth_bloc.dart';
+import 'package:lifevibes/features/auth/bloc/auth_event.dart';
 import 'package:lifevibes/features/onboarding/bloc/onboarding_bloc.dart';
 import 'package:lifevibes/features/onboarding/bloc/onboarding_event.dart';
 import 'package:lifevibes/features/onboarding/bloc/onboarding_state.dart';
